@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {select} from '@angular-redux/store';
+import {Observable} from 'rxjs';
+import {IItems} from '../../const';
 
 @Component({
   selector: 'app-print-page',
@@ -6,8 +9,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./print-page.component.scss']
 })
 export class PrintPageComponent implements OnInit {
+  @select() readonly items$: Observable<IItems>;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

@@ -1,1 +1,12 @@
-<p>print-page works!</p>
+<div class="item">
+  <app-list [items]="(items$|async).list_1"></app-list>
+</div>
+<div class="item">
+  <app-list app-list [items]="(items$|async).list_2"></app-list>
+</div>
+<div class="item">
+  <app-list app-list [items]="(items$|async).list_3"></app-list>
+</div>
+<div class="item">
+  <app-list app-list [items]="(items$|async).list_4"></app-list>
+</div>

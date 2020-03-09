@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import {CounterActionsService} from './services/counter-actions.service';
 import {NgRedux} from '@angular-redux/store';
-import {IItems} from './const';
+import {constants, IItems} from './const';
 import {IAppState} from './store';
+import ITEMS_LOADED = constants.ITEMS_LOADED;
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,7 @@ export class AppComponent {
   constructor(private counterActionsService:CounterActionsService,private ngRedux:NgRedux<IAppState>){
     this.counterActionsService.getItems()
       .subscribe((items:IItems)=>{
-        this.ngRedux.dispatch({type:''})
+        this.ngRedux.dispatch({type:ITEMS_LOADED,payload:items})
       })
   }
 }

@@ -1,1 +1,17 @@
-<p>tool-bar works!</p>
+<div class="container">
+  <div class="btns">
+    <div class="reset">
+      <button (click)="onReset()">Reset</button>
+    </div>
+    <div class="print">
+      <button (click)="onPrint()">Print</button>
+    </div>
+    <div class="logout">
+      <button (click)="onLogout()">Logout</button>
+    </div>
+  </div>
+  <div class="login-details">
+    <div class="name"> name:{{(loginDetails$|async).name}}    </div>
+    <div class="email"> name:{{(loginDetails$|async).email}}    </div>
+  </div>
+</div>
