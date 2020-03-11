@@ -1,5 +1,20 @@
-<div class="container">
-  <div class="user-name">
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
 
+  <div class="container">
+    <div class="user-name">
+      <label>
+        name:
+        <input type="text" formControlName="name">
+      </label>
+    </div>
+    <div class="user-pwd">
+      <label>
+        password:
+        <input type="text" formControlName="pwd">
+      </label>
+    </div>
   </div>
-</div>
+  <div class="btn">
+    <button type="submit" [disabled]="!userForm.valid">Submit</button>
+  </div>
+</form>

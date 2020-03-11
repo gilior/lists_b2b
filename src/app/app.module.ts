@@ -12,6 +12,7 @@ import { PrintPageComponent } from './pages/print-page/print-page.component';
 import { ToolBarComponent } from './components/tool-bar/tool-bar.component';
 import {IAppState, INITIAL_STATE, rootReducer} from './store';
 import {HttpClientModule} from '@angular/common/http';
+import {ReactiveFormsModule} from "@angular/forms";
 
 
 
@@ -29,7 +30,8 @@ import {HttpClientModule} from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     NgReduxModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
